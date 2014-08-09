@@ -1,6 +1,5 @@
 # encoding: utf-8
 # shared example for testing pagination helpers
-require 'spec_helper'
 require 'w_firma/backend/http/helpers/pagination'
 
 # it_behaves_like 'using http pagination helpers'

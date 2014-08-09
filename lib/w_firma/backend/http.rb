@@ -40,7 +40,7 @@ class WFirma
       end
 
       def user_agent_string
-        "Ruby wFirma client #{WFirma::Version}"
+        @user_agent ||= "Ruby wFirma client #{WFirma::Version}"
       end
 
     end

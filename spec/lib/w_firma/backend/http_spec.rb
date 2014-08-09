@@ -20,4 +20,8 @@ describe WFirma::Backend::Http do
     end
   end
 
+  it '#user_agent_string' do
+    expect(subject.user_agent_string).to be_an_instance_of String
+  end
+
 end

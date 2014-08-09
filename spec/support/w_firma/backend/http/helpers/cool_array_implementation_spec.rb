@@ -1,6 +1,5 @@
 # encoding: utf-8
 # shared example for testing pagination helpers
-require 'spec_helper'
 require 'w_firma/backend/http/helpers/cool_array_implementation'
 
 # it_behaves_like 'a cool array implementation'

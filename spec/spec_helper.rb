@@ -41,7 +41,7 @@ require 'w_firma'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
-Dir["./spec/support/**/*.rb"].sort.each { |f| load(f) }
+Dir["./spec/support/**/*.rb"].sort.each { |f| require(f) }
 
 class WFirma::Gem
   def self.root

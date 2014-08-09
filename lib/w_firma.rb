@@ -3,6 +3,9 @@ require 'rubygems'
 require 'bundler/setup'
 Bundler.require(:default)
 
+# Wrapper for WFirma.pl API
+# Author: Ernest Bursa
+
 class WFirma
   require 'w_firma/configuration'
   require 'w_firma/version'
