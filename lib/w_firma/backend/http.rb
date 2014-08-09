@@ -10,6 +10,7 @@ class WFirma
         @config = opts[:config] || WFirma::Configuration.new
       end
 
+      # Cache connection instance
       def connection
         @connector ||= Faraday.new(url: api_base_uri) do |conn|
           conn.request  :url_encoded
@@ -29,6 +30,7 @@ class WFirma
 
       alias :conn :connection
 
+      # Return connection base url
       def api_base_url
         @config.wfirma_api_url || DEFAULT_API_PATH
       end

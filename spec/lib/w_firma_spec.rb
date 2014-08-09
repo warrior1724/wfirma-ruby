@@ -12,6 +12,7 @@ describe WFirma do
       let(:sample_value) { "val#{rand(666_666)}" }
 
       it { expect(subject).to respond_to(:config) }
+      it { expect(subject).to respond_to(:backend) }
 
       it '#config' do
         subject.config do |c|

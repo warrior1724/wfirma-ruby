@@ -16,7 +16,7 @@ require './lib/w_firma/version'
 
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
-  gem.name        = "wfirma"
+  gem.name        = "w_firma"
   gem.homepage    = ""
   gem.license     = "MIT"
   gem.summary     = %Q{Ruby wrapper for wFirma.pl API}

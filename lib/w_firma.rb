@@ -9,7 +9,7 @@ class WFirma
   require 'w_firma/models'
   require 'w_firma/backend/http'
 
-  attr_reader :backend
+  attr_reader :backend, :config
 
   def initialize(opts = {})
     @config  = WFirma::Configuration.new(opts)
