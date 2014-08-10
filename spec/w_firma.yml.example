@@ -1,0 +1,9 @@
+development:
+  login: replace_me
+  password: replace_me
+test:
+  login: replace_me
+  password: replace_me
+production:
+  login: replace_me
+  password: replace_me

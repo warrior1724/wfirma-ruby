@@ -49,3 +49,5 @@ pkg
 #*.rbc
 
 tmp/*
+spec/w_firma.yml
+spec/fixtures

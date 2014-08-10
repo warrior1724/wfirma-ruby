@@ -11,7 +11,7 @@ class WFirma::Configuration
   config_accessor(:verbose) { false }
 
   def initialize(opts = {})
-
+    yield self if block_given?
   end
 
 end

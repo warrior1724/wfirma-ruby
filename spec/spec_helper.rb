@@ -37,11 +37,8 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 Bundler.require(:default, :test)
 
 require 'rspec'
+require 'vcr'
 require 'w_firma'
-
-# Requires supporting files with custom matchers and macros, etc,
-# in ./support/ and its subdirectories.
-Dir["./spec/support/**/*.rb"].sort.each { |f| require(f) }
 
 class WFirma::Gem
   def self.root
@@ -49,6 +46,18 @@ class WFirma::Gem
   end
 end
 
+# Requires supporting files with custom matchers and macros, etc,
+# in ./support/ and its subdirectories.
 RSpec.configure do |c|
   c.treat_symbols_as_metadata_keys_with_true_values = true
+end
+
+Dir["./spec/support/**/*.rb"].sort.each { |f| require(f) }
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.hook_into :webmock # or :fakeweb
+  c.default_cassette_options = { record: :new_episodes }
+  c.configure_rspec_metadata!
+  c.allow_http_connections_when_no_cassette = true
 end

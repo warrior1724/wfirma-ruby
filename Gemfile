@@ -2,6 +2,10 @@ source 'http://rubygems.org'
 
 gem 'activesupport', '~> 4.1'
 gem 'faraday'
+gem 'faraday_middleware'
+gem 'hashie'
+gem 'activemodel', require: 'active_model'
+gem 'multi_json'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
@@ -25,4 +29,9 @@ end
 group :development, :test do
   gem 'pry-remote'
   gem 'ruby-debug'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
 end

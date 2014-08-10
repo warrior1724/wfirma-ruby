@@ -73,6 +73,11 @@ class WFirma
             @pagination_details = nil
           end
 
+          def set_last_response(rsp)
+            @last_api_response = rsp
+            rsp
+          end
+
         end
       end
     end

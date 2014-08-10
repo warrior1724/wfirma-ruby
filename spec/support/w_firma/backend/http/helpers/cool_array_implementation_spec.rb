@@ -7,7 +7,7 @@ RSpec.shared_examples 'a cool array implementation' do
 
   context 'example #find payload' do
 
-    let :payload do
+    let :clear_payload do
       {
         subject.resource_name => {
           "0" => {
@@ -16,22 +16,32 @@ RSpec.shared_examples 'a cool array implementation' do
           "1" => {
             subject.singularized_resource_name => { "id"  => "2" }
           },
-          "parameters" => {
-            "key" => "value"
-          },
-          "3" => {
+          "2" => {
             subject.singularized_resource_name => { "id"  => "3" }
           }
         }
       }
     end
 
-    it '#array_from_xmlized_response' do
-      expect(subject.array_from_xmlized_response(payload)).to eql(
-        [ { id: '1' }, { id: '2' }, { id: '3' } ]
-      )
+    let :payload do
+      _payload = clear_payload.dup
+      _payload[subject.resource_name]["parameters"] = {
+        "key" => "value"
+      }
+      _payload
     end
 
+    let :result do
+      [ { id: '1' }, { id: '2' }, { id: '3' } ]
+    end
+
+    it '#array_from_xmlized_response' do
+      expect(subject.array_from_xmlized_response(payload)).to eql(result)
+    end
+
+    it '#array_to_xmlized_response' do
+      expect(subject.array_to_xmlized_response(result)).to eql(clear_payload)
+    end
 
   end
 end

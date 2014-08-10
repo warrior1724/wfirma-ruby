@@ -25,6 +25,17 @@ class WFirma
             output
           end
 
+          # Example usage:
+          # Input: [ {id: 1} ]
+          # Output:  { 'orders' => { '0' => {order: {id: 1}}, 'notArray' => { field: 'value' } } }
+          def array_to_xmlized_response(array)
+            response = { resource_name => {} }
+            array.each_with_index do |elem, i|
+              response[resource_name][i.to_s] = { singularized_resource_name => elem.stringify_keys }
+            end
+            response
+          end
+
         end
       end
     end
