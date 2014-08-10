@@ -14,12 +14,11 @@ Currently available resources
 Example usage
 ===========
 ```ruby
+require 'w_firma'
+api = WFirma.new(login: 'login', password: 'password')
 
-    require 'w_firma'
-    api = WFirma.new(login: 'login', password: 'password')
-
-    # Find goods
-    api.goods.find(limit: 10)
+# Find goods
+api.goods.find(limit: 10)
 ```
 
 Contributions idea
