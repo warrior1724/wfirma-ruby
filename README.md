@@ -1,13 +1,12 @@
 WFirma Ruby API
 ===========
-
 *Warning*: This project implements only part of WFirma API due to current requirement of project that I am working on. All contributions are welcome :).
 
 Implementation notes
 ===========
-* Currently project is using simple plain authorization over (could be change) SSL HTTP API
+* Currently project is using simple plain authorization over HTTPS API
 
-Currently available resources
+Available resources
 ===========
 * goods
 
@@ -27,7 +26,6 @@ Contributions idea
 
 Contributing to w_firma gem
 ===========
-
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
@@ -38,11 +36,9 @@ Contributing to w_firma gem
 
 Copyright
 ===========
-
 Copyright (c) 2014 Ernest Bursa. See LICENSE.txt for
 further details.
 
 Note
 ===========
-
-This project is maintained by 3rd party (not wFirma.pl)
+This project is maintained by 3rd part.
